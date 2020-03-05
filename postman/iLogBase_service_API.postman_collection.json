@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "95aece1a-2b92-4508-aee4-3da4784b4c07",
+		"_postman_id": "e5a5eec2-5811-46a5-b372-5cd7b3c2840b",
 		"name": "iLogBase service APIs",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
@@ -24,7 +24,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n   \n   \"entities\" : {\n   \t\t\"appId\": \"i-Log\"\n   },\n   \"properties\" : [\n \n   \t\t{\n   \t\t\t\"wifievent\" : [\n   \t\t\t\t{\n   \t\t\t\t\t\"experimentId\": \"testexperiment\",\n   \t\t\t\t\t\"userId\": \"userid1\",\n   \t\t\t\t\t\"day\": \"20200113\",\n   \t\t\t\t\t\"timestamp\" : \"20200113134556980\",\n   \t\t\t\t\t\"ssid\": \"testSsid\",\n   \t\t\t\t\t\"bssid\": \"testbssid\",\n   \t\t\t\t\t\"isconnected\": \"true\"\n   \t\t\t\t}\n   \t\t\t]\n   \t\t},\n   \t\t{\n   \t\t\t\"locationeventpertime\": [\n   \t\t\t\t{\n   \t\t\t\t\t\"experimentId\": \"testexperiment\",\n   \t\t\t\t\t\"userId\": \"userid1\",\n        \t\t\t\"timestamp\": \"201908252359000\",\n        \t\t\t\"day\" : \"20190825\",\n        \t\t\t\"accuracy\": 23.2,\n        \t\t\t\"lucene\": \"lucene\",\n        \t\t\t\"provider\": \"gps\",\n        \t\t\t\"speed\": 2.3,\n        \t\t\t\"point\": {\n        \t\t\t\t\"latitude\": 22.1492,\n        \t\t\t\t\"longitude\": -101.03609,\n            \t\t\t\"altitude\": 1845.29208\n        \t\t\t}\n        \t\t}\n   \t\t\t]\t\n   \t\t}\n  ]\t\n}",
+							"raw": "{\n   \"userId\": \"userid1\",\n   \n   \"experimentId\": \"testexperiment\",\n   \n   \"entities\" : {\n   \t\t\"appId\": \"i-Log\"\n   },\n   \"properties\" : [\n \n   \t\t{\n   \t\t\t\"wifievent\" : [\n   \t\t\t\t{\n   \t\t\t\t\t\"experimentId\": \"testexperiment\",\n   \t\t\t\t\t\"userId\": \"userid1\",\n   \t\t\t\t\t\"day\": \"20200113\",\n   \t\t\t\t\t\"timestamp\" : \"20200113134556980\",\n   \t\t\t\t\t\"ssid\": \"testSsid\",\n   \t\t\t\t\t\"bssid\": \"testbssid\",\n   \t\t\t\t\t\"isconnected\": \"true\"\n   \t\t\t\t}\n   \t\t\t]\n   \t\t},\n   \t\t{\n   \t\t\t\"locationeventpertime\": [\n   \t\t\t\t{\n   \t\t\t\t\t\"experimentId\": \"testexperiment\",\n   \t\t\t\t\t\"userId\": \"userid1\",\n        \t\t\t\"timestamp\": \"201908252359000\",\n        \t\t\t\"day\" : \"20190825\",\n        \t\t\t\"accuracy\": 23.2,\n        \t\t\t\"lucene\": \"lucene\",\n        \t\t\t\"provider\": \"gps\",\n        \t\t\t\"speed\": 2.3,\n        \t\t\t\"point\": {\n        \t\t\t\t\"latitude\": 22.1492,\n        \t\t\t\t\"longitude\": -101.03609,\n            \t\t\t\"altitude\": 1845.29208\n        \t\t\t}\n        \t\t}\n   \t\t\t]\t\n   \t\t}\n  ]\t\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -64,7 +64,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n   \n   \"entities\" : {\n   \t\t\"appId\": \"i-Log\"\n   },\n   \"properties\" : [\n   \t\t{\n   \t\t\t\"wifievent\" : [\n   \t\t\t\t{\n   \t\t\t\t\t\"experimentId\": \"testexperiment\",\n   \t\t\t\t\t\"userId\": \"userid1\",\n   \t\t\t\t\t\"day\": \"20200119\",\n   \t\t\t\t\t\"timestamp\" : \"20200109134556980\",\n   \t\t\t\t\t\"ssid\": \"testSsid\",\n   \t\t\t\t\t\"bssid\": \"testbssid\",\n   \t\t\t\t\t\"isconnected\": \"true\"\n   \t\t\t\t}\n   \t\t\t]\n   \t\t},\n   \t\t{\n   \t\t\t\"locationeventpertime\": [\n   \t\t\t\t{\n   \t\t\t\t\t\"experimentId\": \"testexperiment\",\n   \t\t\t\t\t\"userId\": \"userid1\",\n        \t\t\t\"timestamp\": 201908252359001,\n        \t\t\t\"day\" : 20190825,\n        \t\t\t\"accuracy\": 23.2,\n        \t\t\t\"lucene\": \"lucene\",\n        \t\t\t\"provider\": \"gps\",\n        \t\t\t\"speed\": 2.3,\n        \t\t\t\"point\": {\n        \t\t\t\t\"latitude\": 22.1492,\n        \t\t\t\t\"longitude\": -101.03609,\n            \t\t\t\"altitude\": 1845.29208\n        \t\t\t}\n        \t\t}\n   \t\t\t]\t\n   \t\t}\n  ]\t\n}",
+							"raw": "{\n   \"userId\": \"userid1\",\n   \n   \"experimentId\": \"testexperiment\",\n   \n   \"entities\" : {\n   \t\t\"appId\": \"i-Log\"\n   },\n   \"properties\" : [\n   \t\t{\n   \t\t\t\"wifievent\" : [\n   \t\t\t\t{\n   \t\t\t\t\t\"experimentId\": \"testexperiment\",\n   \t\t\t\t\t\"userId\": \"userid1\",\n   \t\t\t\t\t\"day\": \"20200119\",\n   \t\t\t\t\t\"timestamp\" : \"20200109134556980\",\n   \t\t\t\t\t\"ssid\": \"testSsid\",\n   \t\t\t\t\t\"bssid\": \"testbssid\",\n   \t\t\t\t\t\"isconnected\": \"true\"\n   \t\t\t\t}\n   \t\t\t]\n   \t\t},\n   \t\t{\n   \t\t\t\"locationeventpertime\": [\n   \t\t\t\t{\n   \t\t\t\t\t\"experimentId\": \"testexperiment\",\n   \t\t\t\t\t\"userId\": \"userid1\",\n        \t\t\t\"timestamp\": 201908252359001,\n        \t\t\t\"day\" : 20190825,\n        \t\t\t\"accuracy\": 23.2,\n        \t\t\t\"lucene\": \"lucene\",\n        \t\t\t\"provider\": \"gps\",\n        \t\t\t\"speed\": 2.3,\n        \t\t\t\"point\": {\n        \t\t\t\t\"latitude\": 22.1492,\n        \t\t\t\t\"longitude\": -101.03609,\n            \t\t\t\"altitude\": 1845.29208\n        \t\t\t}\n        \t\t}\n   \t\t\t]\t\n   \t\t}\n  ]\t\n}",
 							"options": {
 								"raw": {
 									"language": "json"
