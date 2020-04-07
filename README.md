@@ -2,6 +2,10 @@
 
 ## Versions
 
+### 0.0.4
+
+- Slightly changed Entity Object
+
 ### 0.0.3
 
 - Fixed the format of timediariesquestion

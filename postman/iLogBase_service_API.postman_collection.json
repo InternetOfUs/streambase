@@ -24,7 +24,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n   \"userId\": \"userid1\",\n   \n   \"experimentId\": \"testexperiment\",\n   \n   \"entities\" : {\n   \t\t\"appId\": \"i-Log\"\n   },\n   \"properties\" : [\n \n   \t\t{\n   \t\t\t\"wifievent\" : [\n   \t\t\t\t{\n   \t\t\t\t\t\"experimentId\": \"testexperiment\",\n   \t\t\t\t\t\"userId\": \"userid1\",\n   \t\t\t\t\t\"day\": \"20200113\",\n   \t\t\t\t\t\"timestamp\" : \"20200113134556980\",\n   \t\t\t\t\t\"ssid\": \"testSsid\",\n   \t\t\t\t\t\"bssid\": \"testbssid\",\n   \t\t\t\t\t\"isconnected\": \"true\"\n   \t\t\t\t}\n   \t\t\t]\n   \t\t},\n   \t\t{\n   \t\t\t\"locationeventpertime\": [\n   \t\t\t\t{\n   \t\t\t\t\t\"experimentId\": \"testexperiment\",\n   \t\t\t\t\t\"userId\": \"userid1\",\n        \t\t\t\"timestamp\": \"201908252357000\",\n        \t\t\t\"day\" : \"20190825\",\n        \t\t\t\"accuracy\": 23.2,\n        \t\t\t\"lucene\": \"lucene\",\n        \t\t\t\"provider\": \"gps\",\n        \t\t\t\"speed\": 2.3,\n        \t\t\t\"point\": {\n        \t\t\t\t\"latitude\": 22.1492,\n        \t\t\t\t\"longitude\": -101.03609,\n            \t\t\t\"altitude\": 1845.29208\n        \t\t\t}\n        \t\t}\n   \t\t\t]\t\n   \t\t},\n   \t\t{\n   \t\t\t\n   \t\t\t\"timediariesquestions\": [\n   \t\t\t\t{\n   \t\t\t\t\t\"experimentId\": \"testexperiment\",\n   \t\t\t\t\t\"userId\": \"userid1\",\n   \t\t\t\t\t\"day\" : \"20190825\",\n        \t\t\t\"instancetimestamp\" : \"201908252356000\",\n        \t\t\t\"instanceid\" : \"instaceid1\",\n        \t\t\t\"question\" : [\n        \t\t\t\t{\n                                    \"q\": {\n                                        \"id\": 1,\n                                        \"c\": [],\n                                        \"t\": \"t\",\n                                        \"at\": \"s\",\n                                        \"p\": [\n                                            {\n                                                \"l\": \"en-US\",\n                                                \"t\": \"What are you doing?\"\n                                            },\n                                            {\n                                                \"l\": \"it-IT\",\n                                                \"t\": \"Cosa stai facendo?\"\n                                            }\n                                        ]\n                                    },\n                                    \"a\": [\n                                        {\n                                            \"id\": 1,\n                                            \"c\": [],\n                                            \"p\": [\n                                                {\n                                                    \"l\": \"en-US\",\n                                                    \"t\": \"Sleeping\"\n                                                },\n                                                {\n                                                    \"l\": \"it-IT\",\n                                                    \"t\": \"Sleeping\"\n                                                }\n                                            ],\n                                            \"c_id\": 74549\n                                        },\n                                        {\n                                            \"id\": 2,\n                                            \"c\": [],\n                                            \"p\": [\n                                                {\n                                                    \"l\": \"en-US\",\n                                                    \"t\": \"Eating\"\n                                                },\n                                                {\n                                                    \"l\": \"it-IT\",\n                                                    \"t\": \"Eating\"\n                                                }\n                                            ],\n                                            \"c_id\": 4317\n                                        }\n                                    \n                                \n                                ]\n        \t\t\t}\n        \t\t\t],\n        \t\t\t\"status\" : \"Status\",\n        \t\t\t\"title\" : \"title\"\n        \t\t\t\n        \t\t}\n   \t\t\t]\t\n   \t\t}\n  ]\t\n}",
+							"raw": "{\n   \"userId\": \"userid1\",\n   \n   \"experimentId\": \"testexperiment\",\n   \n   \"entity\" : {\n   \t\t\"id\": \"userid1\",\n   \t\t\"type\": \"user\"\n   },\n   \"properties\" : [\n \n   \t\t{\n   \t\t\t\"wifievent\" : [\n   \t\t\t\t{\n   \t\t\t\t\t\"experimentId\": \"testexperiment\",\n   \t\t\t\t\t\"userId\": \"userid1\",\n   \t\t\t\t\t\"day\": \"20200113\",\n   \t\t\t\t\t\"timestamp\" : \"20200113134556980\",\n   \t\t\t\t\t\"ssid\": \"testSsid\",\n   \t\t\t\t\t\"bssid\": \"testbssid\",\n   \t\t\t\t\t\"isconnected\": \"true\"\n   \t\t\t\t}\n   \t\t\t]\n   \t\t},\n   \t\t{\n   \t\t\t\"locationeventpertime\": [\n   \t\t\t\t{\n   \t\t\t\t\t\"experimentId\": \"testexperiment\",\n   \t\t\t\t\t\"userId\": \"userid1\",\n        \t\t\t\"timestamp\": \"201908252357000\",\n        \t\t\t\"day\" : \"20190825\",\n        \t\t\t\"accuracy\": 23.2,\n        \t\t\t\"lucene\": \"lucene\",\n        \t\t\t\"provider\": \"gps\",\n        \t\t\t\"speed\": 2.3,\n        \t\t\t\"point\": {\n        \t\t\t\t\"latitude\": 22.1492,\n        \t\t\t\t\"longitude\": -101.03609,\n            \t\t\t\"altitude\": 1845.29208\n        \t\t\t}\n        \t\t}\n   \t\t\t]\t\n   \t\t},\n   \t\t{\n   \t\t\t\n   \t\t\t\"timediariesquestions\": [\n   \t\t\t\t{\n   \t\t\t\t\t\"experimentId\": \"testexperiment\",\n   \t\t\t\t\t\"userId\": \"userid1\",\n   \t\t\t\t\t\"day\" : \"20190825\",\n        \t\t\t\"instancetimestamp\" : \"201908252356000\",\n        \t\t\t\"instanceid\" : \"instaceid1\",\n        \t\t\t\"question\" : [\n        \t\t\t\t{\n                                    \"q\": {\n                                        \"id\": 1,\n                                        \"c\": [],\n                                        \"t\": \"t\",\n                                        \"at\": \"s\",\n                                        \"p\": [\n                                            {\n                                                \"l\": \"en-US\",\n                                                \"t\": \"What are you doing?\"\n                                            },\n                                            {\n                                                \"l\": \"it-IT\",\n                                                \"t\": \"Cosa stai facendo?\"\n                                            }\n                                        ]\n                                    },\n                                    \"a\": [\n                                        {\n                                            \"id\": 1,\n                                            \"c\": [],\n                                            \"p\": [\n                                                {\n                                                    \"l\": \"en-US\",\n                                                    \"t\": \"Sleeping\"\n                                                },\n                                                {\n                                                    \"l\": \"it-IT\",\n                                                    \"t\": \"Sleeping\"\n                                                }\n                                            ],\n                                            \"c_id\": 74549\n                                        },\n                                        {\n                                            \"id\": 2,\n                                            \"c\": [],\n                                            \"p\": [\n                                                {\n                                                    \"l\": \"en-US\",\n                                                    \"t\": \"Eating\"\n                                                },\n                                                {\n                                                    \"l\": \"it-IT\",\n                                                    \"t\": \"Eating\"\n                                                }\n                                            ],\n                                            \"c_id\": 4317\n                                        }\n                                    \n                                \n                                ]\n        \t\t\t}\n        \t\t\t],\n        \t\t\t\"status\" : \"Status\",\n        \t\t\t\"title\" : \"title\"\n        \t\t\t\n        \t\t}\n   \t\t\t]\t\n   \t\t}\n  ]\t\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -64,7 +64,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n   \"userId\": \"userid1\",\n   \n   \"experimentId\": \"testexperiment\",\n   \n   \"entities\" : {\n   \t\t\"appId\": \"i-Log\"\n   },\n   \"properties\" : [\n   \t\t{\n   \t\t\t\"wifievent\" : [\n   \t\t\t\t{\n   \t\t\t\t\t\"experimentId\": \"testexperiment\",\n   \t\t\t\t\t\"userId\": \"userid1\",\n   \t\t\t\t\t\"day\": \"20200119\",\n   \t\t\t\t\t\"timestamp\" : \"20200109134556980\",\n   \t\t\t\t\t\"ssid\": \"testSsid\",\n   \t\t\t\t\t\"bssid\": \"testbssid\",\n   \t\t\t\t\t\"isconnected\": \"true\"\n   \t\t\t\t}\n   \t\t\t]\n   \t\t},\n   \t\t{\n   \t\t\t\"locationeventpertime\": [\n   \t\t\t\t{\n   \t\t\t\t\t\"experimentId\": \"testexperiment\",\n   \t\t\t\t\t\"userId\": \"userid1\",\n        \t\t\t\"timestamp\": 201908252359001,\n        \t\t\t\"day\" : 20190825,\n        \t\t\t\"accuracy\": 23.2,\n        \t\t\t\"lucene\": \"lucene\",\n        \t\t\t\"provider\": \"gps\",\n        \t\t\t\"speed\": 2.3,\n        \t\t\t\"point\": {\n        \t\t\t\t\"latitude\": 22.1492,\n        \t\t\t\t\"longitude\": -101.03609,\n            \t\t\t\"altitude\": 1845.29208\n        \t\t\t}\n        \t\t}\n   \t\t\t]\t\n   \t\t}\n  ]\t\n}",
+							"raw": "{\n   \"userId\": \"userid1\",\n   \n   \"experimentId\": \"testexperiment\",\n   \n   \"entity\" : {\n   \t\t\"id\": \"userid1\",\n   \t\t\"type\": \"user\"\n   },\n   \n   \"properties\" : [\n   \t\t{\n   \t\t\t\"wifievent\" : [\n   \t\t\t\t{\n   \t\t\t\t\t\"experimentId\": \"testexperiment\",\n   \t\t\t\t\t\"userId\": \"userid1\",\n   \t\t\t\t\t\"day\": \"20200119\",\n   \t\t\t\t\t\"timestamp\" : \"20200109134556980\",\n   \t\t\t\t\t\"ssid\": \"testSsid\",\n   \t\t\t\t\t\"bssid\": \"testbssid\",\n   \t\t\t\t\t\"isconnected\": \"true\"\n   \t\t\t\t}\n   \t\t\t]\n   \t\t},\n   \t\t{\n   \t\t\t\"locationeventpertime\": [\n   \t\t\t\t{\n   \t\t\t\t\t\"experimentId\": \"testexperiment\",\n   \t\t\t\t\t\"userId\": \"userid1\",\n        \t\t\t\"timestamp\": 201908252359001,\n        \t\t\t\"day\" : 20190825,\n        \t\t\t\"accuracy\": 23.2,\n        \t\t\t\"lucene\": \"lucene\",\n        \t\t\t\"provider\": \"gps\",\n        \t\t\t\"speed\": 2.3,\n        \t\t\t\"point\": {\n        \t\t\t\t\"latitude\": 22.1492,\n        \t\t\t\t\"longitude\": -101.03609,\n            \t\t\t\"altitude\": 1845.29208\n        \t\t\t}\n        \t\t}\n   \t\t\t]\t\n   \t\t}\n  ]\t\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -115,7 +115,7 @@
 							}
 						},
 						"url": {
-							"raw": "streambase1.disi.unitn.it:8099/data/a0030ae67402c930177f0a0be2bbd65286fa5ee2?experimentId=march&from=20200301&to=20200318&properties=tasksanswers",
+							"raw": "streambase1.disi.unitn.it:8099/data/a0030ae67402c930177f0a0be2bbd65286fa5ee2?experimentId=testtest&from=20200301&to=20200312&properties=tasksanswers",
 							"host": [
 								"streambase1",
 								"disi",
@@ -130,7 +130,7 @@
 							"query": [
 								{
 									"key": "experimentId",
-									"value": "march"
+									"value": "testtest"
 								},
 								{
 									"key": "from",
@@ -138,7 +138,7 @@
 								},
 								{
 									"key": "to",
-									"value": "20200318"
+									"value": "20200312"
 								},
 								{
 									"key": "properties",
@@ -176,7 +176,7 @@
 							}
 						},
 						"url": {
-							"raw": "http://streambase1.disi.unitn.it:8099/data/?experimentId=march&properties=timediariesquestions&from=20200310&to=20200318",
+							"raw": "http://streambase1.disi.unitn.it:8099/data/?experimentId=march&properties=tasksanswers&from=20200310&to=20200318",
 							"protocol": "http",
 							"host": [
 								"streambase1",
@@ -196,7 +196,7 @@
 								},
 								{
 									"key": "properties",
-									"value": "timediariesquestions"
+									"value": "tasksanswers"
 								},
 								{
 									"key": "from",
@@ -271,7 +271,7 @@
 							}
 						],
 						"url": {
-							"raw": "http://streambase1.disi.unitn.it:8099/entities/users?experimentId=march",
+							"raw": "http://streambase1.disi.unitn.it:8099/entities/users?experimentId=testexperiment",
 							"protocol": "http",
 							"host": [
 								"streambase1",
@@ -287,7 +287,7 @@
 							"query": [
 								{
 									"key": "experimentId",
-									"value": "march"
+									"value": "testexperiment"
 								}
 							]
 						}
@@ -316,7 +316,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n\t\"description\": \"This is a sample description\",\n\t\n\t\"entities\" : {\n   \t\t\"appId\": \"i-Log\"\n\t},\n   \"notification\": {\n   \t\t\"url\": \"http://exampleurl.com/notification\"\n   },\n   \n   \"condition\": {\n\t\t\"properties\":[\n\t\t\t\t\"locationevent\", \n\t\t\t\t\"wifievent\"\n\t\t\t] \t\n   },\n   \n   \"properties\": [\n   \t\t\"locationevent\"\n   \t]\n\n}",
+							"raw": "{\n\t\"description\": \"This is a sample description\",\n\t\n\t\"entity\" : {\n   \t\t\"id\": \"userid1\",\n   \t\t\"type\": \"user\"\n\t},\n   \"notification\": {\n   \t\t\"url\": \"http://streambase1.disi.unitn.it:8099/notification\",\n   \t\t\"properties\": [\n   \t\t\"locationeventpertime\"\n   \t]\n   },\n   \n   \"condition\": {\n\t\t\"properties\":[\n\t\t\t\t\"locationeventpertime\", \n\t\t\t\t\"wifievent\"\n\t\t\t] \t\n   }\n\n}",
 							"options": {
 								"raw": {
 									"language": "json"
