@@ -1,3 +1,4 @@
+config.env
 *#
 *.iml
 *.ipr
@@ -32,6 +33,7 @@ interpolated*.xml
 lib/
 manifest.yml
 overridedb.*
+settings.xml
 target
 transaction-logs
 .flattened-pom.xml
