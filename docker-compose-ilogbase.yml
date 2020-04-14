@@ -1,0 +1,15 @@
+# docker-compose.yml
+version: '3.4'
+      
+services:
+  ilogbase:
+    container_name: ilogbase
+    restart: unless-stopped
+    image: ilogbase:1.0
+    build:
+      context: ../
+      network: host
+    env_file:
+      - .env
+    ports:
+      - 8096:8090

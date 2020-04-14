@@ -1,11 +1,11 @@
 #Dockerfile
 FROM maven:3.6.0-jdk-8-alpine AS build
 
-COPY ./pom.xml /usr/app/
+COPY pom.xml /usr/app/
 
 RUN mvn -f /usr/app/pom.xml verify
 
-COPY ./src /usr/app/src/
+COPY src /usr/app/src/
 
 RUN mvn -f /usr/app/pom.xml \
           -DskipTests clean package && \
