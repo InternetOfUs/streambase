@@ -12,9 +12,9 @@ This is a reverse proxy that accepts incoming requests and forwards them to the 
 
 An instance of this component can be found at http://streambase.disi.unitn.it:8096
 
-## Deploy locally
+## Build and Run locally
 
-Run the following command inside the docker directory:
+Run the following command:
 
 ```
 docker-compose -f docker-compose-ilogbase.yml up
