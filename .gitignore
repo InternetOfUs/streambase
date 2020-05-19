@@ -7,3 +7,6 @@
 # Folders
 logs/
 target/
+
+#Intellij
+.idea/

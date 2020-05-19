@@ -7,7 +7,7 @@ services:
     restart: unless-stopped
     image: ilogbase:1.0
     build:
-      context: ../
+      context: ./
       network: host
     env_file:
       - ilogbase.env
