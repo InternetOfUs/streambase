@@ -38,8 +38,7 @@ public class iLogBaseController {
 	String schemeProtocol;
 
 	@PostConstruct
-	private void init() throws Exception{
-
+	private void init() {
 
 	}
 
@@ -48,7 +47,7 @@ public class iLogBaseController {
 									 HttpMethod method, HttpServletRequest request, HttpServletResponse response)
 			throws URISyntaxException {
 
-		logger.info("REST Request at: " + request.getRequestURL());
+		logger.info(method.toString() + " Request at: " + request.getRequestURL());
 
 		URI uri = getUri(request, schemeProtocol, serverAddress, port);
 
