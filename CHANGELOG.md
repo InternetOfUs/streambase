@@ -2,7 +2,7 @@
 
 ## v 1.1
 
-Added tests
+Added functional tests
 
 ## v 1.0
 
