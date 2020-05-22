@@ -1,4 +1,4 @@
-package main;
+package sweb.disi.unitn.it;
 
 
 import org.apache.logging.log4j.LogManager;
@@ -12,11 +12,15 @@ import org.springframework.web.client.HttpStatusCodeException;
 import org.springframework.web.client.RestTemplate;
 import org.springframework.web.util.UriComponentsBuilder;
 
+import javax.annotation.PostConstruct;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.net.URI;
 import java.net.URISyntaxException;
 import java.util.Enumeration;
+import java.util.concurrent.Executors;
+import java.util.concurrent.Semaphore;
+import java.util.concurrent.ThreadFactory;
 
 @RestController
 @RequestMapping(produces = MediaType.APPLICATION_JSON_VALUE)
@@ -33,12 +37,17 @@ public class iLogBaseController {
 	@Value("${ilogbase.scheme-protocol}")
 	String schemeProtocol;
 
+	@PostConstruct
+	private void init() {
+
+	}
+
 	@RequestMapping("/**")
 	public ResponseEntity mirrorRest(@RequestBody(required = false) String body,
 									 HttpMethod method, HttpServletRequest request, HttpServletResponse response)
 			throws URISyntaxException {
 
-		logger.info("REST Request at: " + request.getRequestURL());
+		logger.info(method.toString() + " Request at: " + request.getRequestURL());
 
 		URI uri = getUri(request, schemeProtocol, serverAddress, port);
 
