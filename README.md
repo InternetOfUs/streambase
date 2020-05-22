@@ -1,6 +1,6 @@
 # WENET ILOGBASE
 
-## Introduct
+## Introduction
 
 The iLogBase is a component that manages streams of data. The streams of data are mainly coming from the iLog application (user sensors and user feedback). The other flow of information comes from other external services. The iLogBase provides the services for saving and sharing the streams so that any component of the WeNet infrastructure can collaborate and use the streams of data.
 
