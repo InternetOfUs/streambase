@@ -45,7 +45,7 @@ docker-compose -f docker-compose-ilogbase.yml up
 
 ## Server
 
-The testing server instance of this component can be found at http://streambase1.disi.unitn.it:8096
+The testing server instance of this component can be found at https://wenet.u-hopper.com/dev/streambase6
 
 ## Documentation
 
