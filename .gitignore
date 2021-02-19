@@ -3,6 +3,7 @@
 *.tmp
 *.bak
 *.swp
+docker-hub.sh
 
 # Folders
 logs/
