@@ -9,7 +9,6 @@ echo -n Password:
 read -s password
 echo
 PASSWORD=$password
-PASSWORD="wenet-platform"
 
 docker build . -t $SERVER/$MODULE_NAME:$MODULE_VERSION
 
@@ -23,5 +22,5 @@ else
     fi
 fi
 
-# docker tag internetofus/ilogbase:1.1.0 internetofus/ilogbase:latest
+# docker tag internetofus/ilogbase:1.6.3 internetofus/ilogbase:latest
 # docker tag $SERVER/$MODULE_NAME:$MODULE_VERSION $SERVER/$MODULE_NAME:"latest"
