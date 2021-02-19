@@ -1,8 +1,10 @@
 #Dockerfile
 FROM maven:3.6.0-jdk-8-alpine AS build
 
+COPY jolt /tmp/jolt/
 COPY pom.xml /usr/app/
 
+RUN mvn -f /tmp/jolt/pom.xml install
 RUN mvn -f /usr/app/pom.xml verify
 
 COPY src /usr/app/src/
