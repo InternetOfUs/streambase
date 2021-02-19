@@ -1,0 +1,46 @@
+[
+  {
+    "operation": "remove",
+    "spec": {
+      "properties": {
+        "*": {
+          "*": {
+            "*" : {
+              "experimentId": "",
+              "day": ""
+            }
+          }
+        }
+      }
+    }
+  },
+  {
+    "operation": "shift",
+    "spec": {
+      "userId": "userId",
+      "properties": {
+        "*": {
+          "*": {
+            "*": {
+              "timestamp": "data.&2.[&1].ts",
+              "userId": "data.&2.[&1].userId",
+              "*": "data.&2.[&1].payload.&"
+            }
+          }
+        }
+      }
+    }
+  },
+  {
+    "operation": "modify-overwrite-beta",
+    "spec": {
+      "properties": {
+        "*": {
+          "*": {
+            "ts": "=toEpochMilli(@(1,ts), yyyyMMddhhmmssSSS)"
+          }
+        }
+      }
+    }
+  }
+]

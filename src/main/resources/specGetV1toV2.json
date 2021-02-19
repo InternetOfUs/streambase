@@ -1,0 +1,39 @@
+[
+  {
+    "operation": "remove",
+    "spec": {
+      "users": {
+        "*": {
+          "properties": {
+            "*": {
+              "*": {
+                "*": {
+                  "experimentId": "",
+                  "day": ""
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  {
+    "operation": "modify-overwrite-beta",
+    "spec": {
+      "users": {
+        "*": {
+          "properties": {
+            "*": {
+              "*": {
+                "*": {
+                  "timestamp": "=toEpochMilli(@(1,timestamp), yyyyMMddhhmmssSSS)"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+]

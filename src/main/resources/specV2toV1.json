@@ -1,0 +1,64 @@
+[
+  {
+    "operation": "default",
+    "spec": {
+      "data": {
+        "*[]": {
+          "*": {
+            "meta": {
+              "experimentId": "wenet"
+            }
+          }
+        }
+      }
+    }
+  },
+  {
+    "operation": "shift",
+    "spec": {
+      "userId": "userId",
+      "data": {
+        "*": {
+          "@(2,data.&.[0].meta.experimentId)": "experimentId[]",
+          "*": {
+            "ts": [
+              "properties[#3].&2.[&1].timestamp",
+              "properties[#3].&2.[&1].day"
+            ],
+            "@(4,userId)": "properties[#3].&2.[&1].userId",
+            "payload": {
+              "*": "properties[#4].&3.[&2].&"
+            },
+            "meta": {
+              "experimentId": "properties[#4].&3.[&2].experimentId"
+            }
+          }
+        }
+      }
+    }
+  },
+  {
+    "operation": "shift",
+    "spec": {
+      "experimentId": {
+        "0": "experimentId"
+      },
+      "*": "&"
+    }
+  },
+  {
+    "operation": "modify-overwrite-beta",
+    "spec": {
+      "properties": {
+        "*": {
+          "*": {
+            "*": {
+              "day": "=fromEpochMilli",
+              "timestamp": "=fromEpochMilli(@(1,timestamp), yyyyMMddhhmmssSSS)"
+            }
+          }
+        }
+      }
+    }
+  }
+]
