@@ -59,8 +59,6 @@ public class iLogBaseController {
         URI uri = getUri(request, schemeProtocol, serverAddress, port);
 
         HttpHeaders headers = getHeaders(request);
-        headers.set("Authorization", "test:");
-        headers.set("source", "wenet");
 
         return sendRest(uri, method, body, headers);
     }
@@ -75,8 +73,21 @@ public class iLogBaseController {
         URI uri = getUri(request, schemeProtocol, serverAddress, port);
 
         HttpHeaders headers = getHeaders(request);
-        headers.set("Authorization", "test:");
 
+        ResponseEntity re = sendRest(uri, method, body, headers);
+        return ResponseEntity.status(re.getStatusCode())
+                .headers(re.getHeaders())
+                .body(re.getBody());
+    }
+
+    @RequestMapping(value = "/experimentSubscription", method = RequestMethod.POST)
+    public ResponseEntity experimentSubscriptionPost(@RequestBody(required = false) String body,
+                                               HttpMethod method, HttpServletRequest request, HttpServletResponse response)
+            throws URISyntaxException {
+
+        logger.info(method.toString() + " Request at: " + request.getRequestURL());
+        URI uri = getUri(request, schemeProtocol, serverAddress, port);
+        HttpHeaders headers = getHeaders(request);
         ResponseEntity re = sendRest(uri, method, body, headers);
         return ResponseEntity.status(re.getStatusCode())
                 .headers(re.getHeaders())
@@ -97,7 +108,6 @@ public class iLogBaseController {
         if (!headers.containsKey("experimentId")) {
             headers.add("experimentId", "wenet");
         }
-        headers.set("Authorization", "test:");
 
         ResponseEntity re = sendRest(uri, method, null, headers);
         return ResponseEntity.status(re.getStatusCode())
@@ -119,7 +129,6 @@ public class iLogBaseController {
         if (!headers.containsKey("experimentId")) {
             headers.add("experimentId", "wenet");
         }
-        headers.set("Authorization", "test:");
 
         ResponseEntity re = sendRest(uri, method, null, headers);
         return ResponseEntity.status(re.getStatusCode())
@@ -147,7 +156,6 @@ public class iLogBaseController {
         URI uri = getUri(request, schemeProtocol, serverAddress, port);
 
         HttpHeaders headers = getHeaders(request);
-        headers.set("Authorization", "test:");
 
         ResponseEntity re = sendRest(uri, method, body, headers);
         return ResponseEntity.status(re.getStatusCode())
@@ -194,7 +202,10 @@ public class iLogBaseController {
             String headerName = headerNames.nextElement();
             headers.set(headerName, request.getHeader(headerName));
         }
+        if (!headers.containsKey("source"))
+            headers.set("source", "wenet");
 
+        headers.set("Authorization", "test:");
         return headers;
     }
 }
