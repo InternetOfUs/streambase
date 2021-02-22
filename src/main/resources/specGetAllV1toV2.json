@@ -1,0 +1,61 @@
+[
+  {
+    "operation": "remove",
+    "spec": {
+      "users": {
+        "*": {
+          "properties": {
+            "*": {
+              "*": {
+                "*": {
+                  "experimentId": "",
+                  "day": ""
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  {
+    "operation": "shift",
+    "spec": {
+      "users": {
+        "*": {
+          "userId": "[&1].userId",
+          "properties": {
+            "*": {
+              "*": {
+                "*": {
+                  "timestamp": "[&5].data.&2.[&1].ts",
+                  "userId": "[&5].data.&2.[&1].userId",
+                  "*": "[&5].data.&2.[&1].payload.&"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  {
+    "operation": "modify-overwrite-beta",
+    "spec": {
+      "users": {
+        "*": {
+          "properties": {
+            "*": {
+              "*": {
+                "*": {
+                  "timestamp": "=toEpochMilli(@(1,timestamp), yyyyMMddhhmmssSSS)"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+]
+
