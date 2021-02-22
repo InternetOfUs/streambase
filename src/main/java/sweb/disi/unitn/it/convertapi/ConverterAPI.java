@@ -44,6 +44,16 @@ public class ConverterAPI {
         Object output = chainr.transform(input);
         logger.info("Convert GET V1 to V2 - OUTPUT: " + JsonUtils.toPrettyJsonString(output));
         return JsonUtils.toPrettyJsonString(output);
+    }    
+    
+    public static String convertGetAllV1toV2(String body) {
+        logger.info("Convert GET V1 to V2 - BODY: " + body);
+        InputStream is = ConverterAPI.class.getClassLoader().getResourceAsStream("specGetAllV1toV2.json");
+        Chainr chainr = Chainr.fromSpec(JsonUtils.jsonToList(is));
+        Object input = JsonUtils.jsonToObject(body);
+        Object output = chainr.transform(input);
+        logger.info("Convert GET V1 to V2 - OUTPUT: " + JsonUtils.toPrettyJsonString(output));
+        return JsonUtils.toPrettyJsonString(output);
     }
 
     //Testing to check paths are correct

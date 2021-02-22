@@ -102,7 +102,7 @@ public class iLogBaseController {
         ResponseEntity re = sendRest(uri, method, null, headers);
         return ResponseEntity.status(re.getStatusCode())
                 .headers(re.getHeaders())
-                .body(ConverterAPI.convertGetV1toV2((String) re.getBody()));
+                .body(ConverterAPI.convertGetAllV1toV2((String) re.getBody()));
     }
 
     @RequestMapping(value = "/data/{userId}", method = RequestMethod.GET)
