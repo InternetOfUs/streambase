@@ -42,15 +42,11 @@
   {
     "operation": "modify-overwrite-beta",
     "spec": {
-      "users": {
-        "*": {
-          "properties": {
+      "*": {
+        "data": {
+          "*": {
             "*": {
-              "*": {
-                "*": {
-                  "timestamp": "=toEpochMilli(@(1,timestamp), yyyyMMddhhmmssSSS)"
-                }
-              }
+              "ts": "=toEpochMilli(@(1,ts), yyyyMMddhhmmssSSS)"
             }
           }
         }
