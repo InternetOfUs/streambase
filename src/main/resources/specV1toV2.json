@@ -34,7 +34,7 @@
   {
     "operation": "modify-overwrite-beta",
     "spec": {
-      "properties": {
+      "data": {
         "*": {
           "*": {
             "ts": "=toEpochMilli(@(1,ts), yyyyMMddhhmmssSSS)"
