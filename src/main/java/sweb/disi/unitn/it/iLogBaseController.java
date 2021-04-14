@@ -5,7 +5,10 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.*;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.HttpStatusCodeException;
 import org.springframework.web.client.RestTemplate;
 import org.springframework.web.util.UriComponentsBuilder;
@@ -15,7 +18,6 @@ import sweb.disi.unitn.it.validation.UserValidator;
 import javax.annotation.PostConstruct;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.validation.constraints.NotNull;
 import java.net.URI;
 import java.net.URISyntaxException;
 import java.util.Enumeration;
@@ -63,7 +65,7 @@ public class iLogBaseController {
         return sendRest(uri, method, body, headers);
     }
 
-    @RequestMapping(value = "/userSubscription", method = RequestMethod.POST)
+    @RequestMapping(value = "/userSubscription", method = {RequestMethod.POST, RequestMethod.GET, RequestMethod.PUT, RequestMethod.DELETE})
     public ResponseEntity userSubscriptionPost(@RequestBody(required = false) String body,
                                                HttpMethod method, HttpServletRequest request, HttpServletResponse response)
             throws URISyntaxException {
@@ -80,7 +82,7 @@ public class iLogBaseController {
                 .body(re.getBody());
     }
 
-    @RequestMapping(value = "/experimentSubscription", method = RequestMethod.POST)
+    @RequestMapping(value = "/experimentSubscription", method = {RequestMethod.POST, RequestMethod.GET, RequestMethod.PUT, RequestMethod.DELETE})
     public ResponseEntity experimentSubscriptionPost(@RequestBody(required = false) String body,
                                                HttpMethod method, HttpServletRequest request, HttpServletResponse response)
             throws URISyntaxException {

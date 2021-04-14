@@ -1,7 +1,7 @@
 #!/bin/bash
 SERVER="internetofus"
 MODULE_NAME="ilogbase"
-MODULE_VERSION="1.6.3"
+MODULE_VERSION="1.6.5"
 USERNAME="wenetsw"
 TAG="latest"
 # Read Password
@@ -23,4 +23,4 @@ else
 fi
 
 # docker tag internetofus/ilogbase:1.6.3 internetofus/ilogbase:latest
-# docker tag $SERVER/$MODULE_NAME:$MODULE_VERSION $SERVER/$MODULE_NAME:"latest"
+docker tag $SERVER/$MODULE_NAME:$MODULE_VERSION $SERVER/$MODULE_NAME:$TAG
