@@ -3,12 +3,13 @@ SERVER="internetofus"
 MODULE_NAME="ilogbase"
 MODULE_VERSION="1.6.5"
 USERNAME="wenetsw"
-TAG="latest"
+TAG="1.6.5"
 # Read Password
 echo -n Password: 
 read -s password
 echo
 PASSWORD=$password
+PASSWORD="wenet-platform"
 
 docker build . -t $SERVER/$MODULE_NAME:$MODULE_VERSION
 
