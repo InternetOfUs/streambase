@@ -1,9 +1,9 @@
 #!/bin/bash
 SERVER="internetofus"
 MODULE_NAME="ilogbase"
-MODULE_VERSION="1.6.5"
+MODULE_VERSION="1.6.6"
 USERNAME="wenetsw"
-TAG="1.6.5"
+TAG="1.6.6"
 # Read Password
 echo -n Password: 
 read -s password
