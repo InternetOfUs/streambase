@@ -49,7 +49,6 @@ public class iLogBaseController {
             throws URISyntaxException {
 
         logger.info("POST: --custom /data");
-        logger.debug(method.toString() + " Request at: " + request.getRequestURL());
 
         UserValidator userValidator = new UserValidator(request.getHeader(authenticationHeader));
         if (!userValidator.isValid(body)) {
@@ -69,8 +68,7 @@ public class iLogBaseController {
                                                HttpMethod method, HttpServletRequest request, HttpServletResponse response)
             throws URISyntaxException {
 
-        logger.info("POST: --custom /userSubscription");
-        logger.debug(method.toString() + " Request at: " + request.getRequestURL());
+        logger.info(method.toString() + " Request at: " + request.getRequestURL());
 
         URI uri = getUri(request, schemeProtocol, serverAddress, port);
 
@@ -87,8 +85,7 @@ public class iLogBaseController {
                                                HttpMethod method, HttpServletRequest request, HttpServletResponse response)
             throws URISyntaxException {
 
-        logger.info("POST: --custom /experimentSubscription");
-        logger.debug(method.toString() + " Request at: " + request.getRequestURL());
+        logger.info(method.toString() + " Request at: " + request.getRequestURL());
         URI uri = getUri(request, schemeProtocol, serverAddress, port);
         HttpHeaders headers = getHeaders(request);
         ResponseEntity re = sendRest(uri, method, body, headers);
@@ -101,8 +98,7 @@ public class iLogBaseController {
     public ResponseEntity streambaseDataGetAll(HttpMethod method, HttpServletRequest request, HttpServletResponse response)
             throws URISyntaxException {
 
-        logger.info("GET: --custom /data");
-        logger.debug(method.toString() + " Request at: " + request.getRequestURL());
+        logger.info(method.toString() + " Request at: " + request.getRequestURL());
 
         UserValidator userValidator = new UserValidator(request.getHeader(authenticationHeader));
 
@@ -123,8 +119,7 @@ public class iLogBaseController {
     public ResponseEntity streambaseDataGet(HttpMethod method, HttpServletRequest request, HttpServletResponse response)
             throws URISyntaxException {
 
-        logger.info("GET: --custom /data/{userId}");
-        logger.debug(method.toString() + " Request at: " + request.getRequestURL());
+        logger.info(method.toString() + " Request at: " + request.getRequestURL());
 
         UserValidator userValidator = new UserValidator(request.getHeader(authenticationHeader));
 
@@ -146,8 +141,7 @@ public class iLogBaseController {
                                      HttpMethod method, HttpServletRequest request, HttpServletResponse response)
             throws URISyntaxException {
 
-        logger.info("GET: --custom ** (the Rest)");
-        logger.debug(method.toString() + " Request at: " + request.getRequestURL());
+        logger.info(method.toString() + " Request at: " + request.getRequestURL());
 
         UserValidator userValidator = new UserValidator(request.getHeader(authenticationHeader));
         if (!userValidator.isValid(body)) {
@@ -195,8 +189,6 @@ public class iLogBaseController {
                 .path(requestUrl)
                 .query(request.getQueryString())
                 .build(true).toUri();
-
-        logger.debug("ilogbase - URI: "+ uri.toString());
 
         return uri;
     }
