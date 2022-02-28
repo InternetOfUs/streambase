@@ -1,5 +1,9 @@
 #CHANGELOG
 
+## v 2.5
+
+* Updating the log4j vulnerability.
+
 ## v 1.6
 
 * Creating an specific service for GET DATA (avoid userid and body checks; and add experimentId header).
