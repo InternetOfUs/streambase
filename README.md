@@ -65,8 +65,8 @@ docker-compose -f docker-compose-ilogbase.yml up
 
 ## Server
 
-* The testing server instance of ILogbase can be found at https://wenet.u-hopper.com/dev/streambase
-* The testing server instance of Commons APIs can be found at https://wenet.u-hopper.com/dev/api/commons
+* The Production server instance of ILogbase can be found at https://internetofus.u-hopper.com/prod/streambase (only for internal components)
+* The Production server instance of Commons APIs can be found at https://internetofus.u-hopper.com/prod/api/commons
 
 ## Documentation
 
