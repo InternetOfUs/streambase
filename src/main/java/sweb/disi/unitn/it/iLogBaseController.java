@@ -5,7 +5,10 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.*;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.HttpStatusCodeException;
 import org.springframework.web.client.RestTemplate;
 import org.springframework.web.util.UriComponentsBuilder;
@@ -15,7 +18,6 @@ import sweb.disi.unitn.it.validation.UserValidator;
 import javax.annotation.PostConstruct;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.validation.constraints.NotNull;
 import java.net.URI;
 import java.net.URISyntaxException;
 import java.util.Enumeration;
@@ -37,6 +39,9 @@ public class iLogBaseController {
 
     @Value("${ilogbase.authentication_header}")
     String authenticationHeader;
+
+    @Value("${ilogbase.authentication_ilogbase}")
+    String internaluser;
 
     @PostConstruct
     private void init() {
@@ -205,7 +210,7 @@ public class iLogBaseController {
         if (!headers.containsKey("source"))
             headers.set("source", "wenet");
 
-        headers.set("Authorization", "test:");
+        headers.set("Authorization", internaluser);
         return headers;
     }
 }
