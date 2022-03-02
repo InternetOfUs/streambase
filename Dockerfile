@@ -18,4 +18,5 @@ COPY --from=build /docker-image.jar /docker-image.jar
 RUN sh -c 'touch /docker-image.jar' && apk update && apk add tzdata
 ENV JAVA_OPTS="-Xmx1g"
 ENV TZ=Europe/Rome
+ENV PROFILE="prod"
 ENTRYPOINT [ "sh", "-c", "java $JAVA_OPTS -Djava.security.egd=file:/dev/./urandom -jar /docker-image.jar" ]
