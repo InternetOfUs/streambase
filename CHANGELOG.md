@@ -3,6 +3,8 @@
 ## v 2.5
 
 * Updating the log4j vulnerability.
+* Updating logging configuration.
+* Adding Active Profile for logging (dev and prod).
 
 ## v 1.6
 

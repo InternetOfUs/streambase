@@ -18,5 +18,5 @@ COPY --from=build /docker-image.jar /docker-image.jar
 RUN sh -c 'touch /docker-image.jar' && apk update && apk add tzdata
 ENV JAVA_OPTS="-Xmx1g"
 ENV TZ=Europe/Rome
-ENV PROFILE="prod"
+ENV PROFILE=${ACTIVE_PROFILE}
 ENTRYPOINT [ "sh", "-c", "java $JAVA_OPTS -Dspring.profiles.active=$PROFILE -Djava.security.egd=file:/dev/./urandom -jar /docker-image.jar" ]
