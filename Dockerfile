@@ -16,6 +16,6 @@ RUN mvn -f /usr/app/pom.xml \
 FROM frolvlad/alpine-java:jdk8-slim
 COPY --from=build /docker-image.jar /docker-image.jar
 RUN sh -c 'touch /docker-image.jar' && apk update && apk add tzdata
-ENV JAVA_OPTS="-Xmx1g"
+ENV JAVA_OPTS="-Xmx3g"
 ENV TZ=Europe/Rome
 ENTRYPOINT [ "sh", "-c", "java $JAVA_OPTS -Dspring.profiles.active=$ACTIVE_PROFILE -Djava.security.egd=file:/dev/./urandom -jar /docker-image.jar" ]
