@@ -141,6 +141,24 @@ public class iLogBaseController {
                 .body(ConverterAPI.convertV1toV2((String) re.getBody()));
     }
 
+    @RequestMapping(value = "/data/{userId}", method = RequestMethod.DELETE)
+    public ResponseEntity streambaseDataDelete(HttpMethod method, HttpServletRequest request, HttpServletResponse response)
+            throws URISyntaxException {
+
+        logger.info(method.toString() + " Request-7 at: " + request.getRequestURL());
+
+        URI uri = getUri(request, schemeProtocol, serverAddress, port);
+
+        HttpHeaders headers = getHeaders(request);
+        String from = request.getParameter("from");
+        String to = request.getParameter("to");
+
+        ResponseEntity re = sendRest(uri, method, null, headers);
+        return ResponseEntity.status(re.getStatusCode())
+                .headers(re.getHeaders())
+                .body((String) re.getBody());
+    }
+
     @RequestMapping("/**")
     public ResponseEntity mirrorRest(@RequestBody(required = false) String body,
                                      HttpMethod method, HttpServletRequest request, HttpServletResponse response)
