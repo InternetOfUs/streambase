@@ -1,5 +1,10 @@
 #CHANGELOG
 
+
+## V 2.6
+
+* Creating an specific servie for DELETE /data/{userid}.
+
 ## v 2.5
 
 * Updating the log4j vulnerability.
